@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Program
+    class Herd
     {
-        static void Main(string[] args)
-        {
 
-        }
+        //member variables
+
+
+        //constructor
+
+
+
+        //member methods
+
     }
 }

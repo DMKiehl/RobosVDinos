@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Program
+    class Battlefield
     {
-        static void Main(string[] args)
+
+        //member variables
+
+
+        //constructor
+
+
+
+        //member methods
+
+            //Initiates the battle
+        public void Run()
         {
 
         }
+
     }
 }
