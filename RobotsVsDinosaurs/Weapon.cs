@@ -11,21 +11,43 @@ namespace RobotsVsDinosaurs
 
         //member variables
         public string WeaponType;
-        public int WeaponAttackPower;
+        public int AttackPower;
+        
+
 
 
 
 
         //constructor
-        public Weapon(string weaponType, int attackPower)
+        public Weapon()
         {
 
         }
 
-            public Weapon sword = new Weapon("Sword", 2);
-            public Weapon rocket = new Weapon("Rocket", 6);
-            public Weapon powerFists = new Weapon("Power Fists", 4);
-        
+
+        public void AssignWeapon(string robotType)
+        {
+
+            //switch (robotType)
+            //{
+            //    case "Humanoid":
+            //        return "Powerfists";
+                    
+
+            //    case "Destroyer":
+            //        return "Rocket";
+                    
+
+            //    case "Nightwalker":
+            //        return "Sword";
+                    
+
+            //}
+            //return "No Weapon assigned.";
+
+
+        }
+            
 
 
         //member methods

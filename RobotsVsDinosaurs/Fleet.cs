@@ -10,7 +10,9 @@ namespace RobotsVsDinosaurs
     {
 
         //member variables
-        
+        public Robot Humanoid = new Robot("Humanoid", 30, 100);
+        public Robot Nightcrawler = new Robot("Nightcrawler", 25, 100);
+        public Robot Destroyer = new Robot("Destroyer", 35, 100);
 
 
 
