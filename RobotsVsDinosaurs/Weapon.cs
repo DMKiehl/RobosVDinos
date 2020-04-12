@@ -28,21 +28,27 @@ namespace RobotsVsDinosaurs
         public void AssignWeapon(string robotType)
         {
 
-            //switch (robotType)
-            //{
-            //    case "Humanoid":
-            //        return "Powerfists";
+            switch (robotType)
+            {
+               case "Humanoid":
+                   WeaponType = "Powerfists";
+                   AttackPower = 4;
+                   break;
                     
 
-            //    case "Destroyer":
-            //        return "Rocket";
+                case "Destroyer":
+                     WeaponType = "Rocket";
+                     AttackPower = 6;
+                    break;
                     
 
-            //    case "Nightwalker":
-            //        return "Sword";
+                case "Nightwalker":
+                    WeaponType = "Sword";
+                    AttackPower = 3;
+                    break;
                     
 
-            //}
+            }
             //return "No Weapon assigned.";
 
 

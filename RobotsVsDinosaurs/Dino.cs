@@ -16,6 +16,15 @@ namespace RobotsVsDinosaurs
 
         //construtor
 
+        public Dino(string dinoType, int dinoHealth, int dinoEnergy, int dinoAttackPower)
+        {
+            DinoType = dinoType;
+            DinoHealth = dinoHealth;
+            DinoEnergy = dinoEnergy;
+            DinoAttackPower = dinoAttackPower;
+
+        }
+
         //member methods
 
     }

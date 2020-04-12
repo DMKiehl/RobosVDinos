@@ -10,6 +10,10 @@ namespace RobotsVsDinosaurs
     {
 
         //member variables
+        public Dino Stegosaurus = new Dino();
+        public Dino Triceraopts = new Dino();
+        public Dino Tyrannosaurus = new Dino();
+
 
 
         //constructor
