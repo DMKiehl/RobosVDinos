@@ -19,8 +19,14 @@ namespace RobotsVsDinosaurs
         //member methods
 
             //Initiates the battle
-        public void Run()
+        public void Battle()
         {
+            
+            while (DinoHealth && RobotHealth > 0)
+            {
+
+            }
+
 
         }
 

@@ -9,19 +9,19 @@ namespace RobotsVsDinosaurs
     class Dino
     {
         //member variables
-        public string DinoType;
-        public int DinoHealth;
-        public int DinoEnergy;
-        public int DinoAttackPower;
+        public string DinoType { get; set; }
+        public int DinoHealth { get; set; }
+        public int DinoEnergy { get; set; }
+        public int DinoAttackPower { get; set; }
 
         //construtor
 
-        public Dino(string dinoType, int dinoHealth, int dinoEnergy, int dinoAttackPower)
+        public Dino()
         {
-            DinoType = dinoType;
-            DinoHealth = dinoHealth;
-            DinoEnergy = dinoEnergy;
-            DinoAttackPower = dinoAttackPower;
+           // DinoType = dinoType;
+            //DinoHealth = dinoHealth;
+           // DinoEnergy = dinoEnergy;
+           // DinoAttackPower = dinoAttackPower;
 
         }
 

@@ -9,19 +9,19 @@ namespace RobotsVsDinosaurs
     class Robot
     {
         //member variables
-        public string RobotType;
-        public int RobotHealth;
-        public int RobotPower;
-        public Weapon AssignedWeapon; 
+        public string RobotType { get; set; }
+        public int RobotHealth { get; set; }
+        public int RobotPower { get; set; }
+        public Weapon AssignedWeapon { get; set; }
 
         //constructor
-        public Robot(string robotType, int robotHealth, int robotPower)
+        public Robot()
         {
-            RobotType = robotType;
-            RobotHealth = robotHealth;
-            RobotPower = robotPower;
+            //RobotType = robotType;
+            //RobotHealth = robotHealth;
+            //RobotPower = robotPower;
             AssignedWeapon = new Weapon();
-            AssignedWeapon.AssignWeapon(robotType);
+            AssignedWeapon.AssignWeapon(RobotType);
         }
 
         

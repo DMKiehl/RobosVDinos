@@ -32,7 +32,7 @@ namespace RobotsVsDinosaurs
             {
                case "Humanoid":
                    WeaponType = "Powerfists";
-                   AttackPower = 4;
+                   AttackPower = 5;
                    break;
                     
 
@@ -44,12 +44,12 @@ namespace RobotsVsDinosaurs
 
                 case "Nightwalker":
                     WeaponType = "Sword";
-                    AttackPower = 3;
+                    AttackPower = 4;
                     break;
                     
 
             }
-            //return "No Weapon assigned.";
+            
 
 
         }
