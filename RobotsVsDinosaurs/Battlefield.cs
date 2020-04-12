@@ -19,16 +19,24 @@ namespace RobotsVsDinosaurs
         //member methods
 
             //Initiates the battle
-        public void Battle()
+        public void InitiateBattle()
         {
-            
-            while (DinoHealth && RobotHealth > 0)
-            {
 
-            }
+            Fleet fleet = new Fleet();
+            Herd herd = new Herd();
 
+            fleet.robotList = fleet.PullRobots();
+
+            herd.dinoList = herd.PullDinos();
+
+            Console.WriteLine(herd.dinoList);
+            Console.ReadLine();
 
         }
-
+        //while()
+        //Console.WriteLine("Please choose a robot to battle");
+        //string robotInput = Console.ReadLine();
+        //Console.WriteLine("Please choose a dinosaur to battle");
+        //string dinoInput = Console.ReadLine();
     }
 }
