@@ -10,11 +10,11 @@ namespace RobotsVsDinosaurs
     {
         static void Main(string[] args)
         {
+           
+
             Battlefield newBattle = new Battlefield();
-            newBattle.InitiateBattle();
-            newBattle.ChooseDino();
-            newBattle.ChooseRobot();
-            newBattle.AttackBattle();
+            newBattle.DinoAttack();
+            newBattle.RobotAttack();
 
             
         }

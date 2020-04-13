@@ -20,19 +20,19 @@ namespace RobotsVsDinosaurs
 
         public List<Dino> PullDinos()
         {
-            List<Dino> dinoList = new List<Dino>
+            dinoList = new List<Dino>
             {
                 new Dino {DinoType = "Stegosaurus", DinoHealth = 35, DinoEnergy = 100, DinoAttackPower = 4},
                 new Dino {DinoType = "Triceratops", DinoHealth = 30, DinoEnergy = 100, DinoAttackPower = 5},
                 new Dino {DinoType = "Tyrannosaurus", DinoHealth = 40, DinoEnergy = 100, DinoAttackPower = 7},
             };
-            foreach (Dino dino in dinoList)
-            {
-                Console.WriteLine(dino.DinoType + " " + dino.DinoHealth + " " + dino.DinoEnergy + " " + dino.DinoAttackPower);
+            //foreach (Dino dino in dinoList)
+            //{
+            //    Console.WriteLine(dino.DinoType + " " + dino.DinoHealth + " " + dino.DinoEnergy + " " + dino.DinoAttackPower);
 
                 
-            }
-            Console.ReadLine();
+            //}
+            //Console.ReadLine();
             return dinoList;
 
 

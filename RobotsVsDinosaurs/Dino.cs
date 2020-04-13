@@ -26,6 +26,20 @@ namespace RobotsVsDinosaurs
         }
 
         //member methods
+        public void AttackRobot(Robot robotToAttack, Dino dinoAttacking)
+        {
+            if (robotToAttack.RobotHealth <= 0)
+            {
+                Console.WriteLine("Robot is dead. Battle over!");
+            }
+            else
+            {
+                robotToAttack.RobotHealth -= dinoAttacking.DinoAttackPower;
+            }
+            
+
+            
+        }
 
     }
 }

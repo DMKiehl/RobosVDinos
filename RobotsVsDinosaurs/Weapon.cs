@@ -19,9 +19,9 @@ namespace RobotsVsDinosaurs
 
 
         //constructor
-        public Weapon()
+        public Weapon(string weaponType)
         {
-
+            AssignWeapon(weaponType);
         }
 
 
@@ -32,7 +32,7 @@ namespace RobotsVsDinosaurs
             {
                 WeaponType = "Powerfists";
                 AttackPower = 5;
-                return; 
+                
             }
 
             else if (robotType == "Destroyer")

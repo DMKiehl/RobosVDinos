@@ -23,22 +23,22 @@ namespace RobotsVsDinosaurs
 
         public List<Robot> PullRobots()
         {
-            List<Robot> robotList = new List<Robot>
+            robotList = new List<Robot>
             {
-                new Robot {RobotType = "Humanoid", RobotHealth = 30, RobotPower = 100, AssignedWeapon = new Weapon()},
-                new Robot {RobotType = "Nightcrawler", RobotHealth = 25, RobotPower = 100, AssignedWeapon = new Weapon()},
-                new Robot {RobotType = "Destroyer", RobotHealth = 35, RobotPower = 100, AssignedWeapon = new Weapon()},
+                new Robot {RobotType = "Humanoid", RobotHealth = 30, RobotPower = 100, AssignedWeapon = new Weapon("Humanoid")},
+                new Robot {RobotType = "Nightcrawler", RobotHealth = 25, RobotPower = 100, AssignedWeapon = new Weapon("Nightcrawler")},
+                new Robot {RobotType = "Destroyer", RobotHealth = 35, RobotPower = 100, AssignedWeapon = new Weapon("Destroyer")},
 
             };
 
-            foreach(Robot robot in robotList)
-            {
-                Console.WriteLine(robot.RobotType + " " + robot.RobotHealth + " " + robot.RobotPower + " " + robot.AssignedWeapon);
+            //foreach(Robot robot in robotList)
+            //{
+            //    Console.WriteLine(robot.RobotType + " " + robot.RobotHealth + " " + robot.RobotPower + " " + robot.AssignedWeapon);
                
                 
                 
-            }
-            Console.ReadLine();
+            //}
+            //Console.ReadLine();
 
             return robotList;
            

@@ -17,17 +17,9 @@ namespace RobotsVsDinosaurs
         //constructor
         public Robot()
         {
-            //RobotType = robotType;
-            //RobotHealth = robotHealth;
-            //RobotPower = robotPower;
-            AssignedWeapon = new Weapon();
-            AssignedWeapon.AssignWeapon("Humanoid");
-            AssignedWeapon.AssignWeapon("Destroyer");
-            AssignedWeapon.AssignWeapon("Nightcraweler");
+
+
         }
-
-
-
         
 
         
@@ -35,7 +27,20 @@ namespace RobotsVsDinosaurs
 
 
         //methods
-        
+        public void AttackDino(Dino dinoToAttack)
+        {
+            if (dinoToAttack.DinoHealth == 0)
+            {
+                Console.WriteLine("Dino is dead. Battle over!");
+            }
+            else
+            {
+                dinoToAttack.DinoHealth -= AssignedWeapon.AttackPower;
+            }
+            
+
+           
+        }
         
 
     }
