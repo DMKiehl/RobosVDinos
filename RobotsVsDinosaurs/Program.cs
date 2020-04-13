@@ -14,6 +14,7 @@ namespace RobotsVsDinosaurs
 
             Battlefield newBattle = new Battlefield();
             newBattle.Battle();
+            //newBattle.DeclareWinner();
 
             
         }

@@ -12,10 +12,7 @@ namespace RobotsVsDinosaurs
         //member variables
         Fleet fleet = new Fleet();
         Herd herd = new Herd();
-        //public int RobotHealth;
-        //public int DinoHealth;
-        //public int DinoAttackPower;
-       // public int WeaponPower;
+       
 
         //constructor
         public Battlefield()
@@ -23,14 +20,17 @@ namespace RobotsVsDinosaurs
             fleet.robotList = fleet.PullRobots();
 
             herd.dinoList = herd.PullDinos();
-            //Assign RobotHealth member variable to the robothealth of the chosen robot and same for dino
-            //Assign dinoattack member variable to the attack power of the chosen dino and same for weapon on robot
+            
         }
 
 
         public int ChooseRobot()
         {
-            Console.WriteLine("Please choose the number of the robot to battle: \n1. Humanoid \n2. Nightcrawler \n3. Destroyer");
+            Console.WriteLine("Please choose the number of the robot to battle: \n");
+            foreach (Robot robot in fleet.robotList)
+            {
+                Console.WriteLine(robot.RobotType);
+            }
             int robotInput = Convert.ToInt32(Console.ReadLine());
             return robotInput;
             
@@ -38,20 +38,41 @@ namespace RobotsVsDinosaurs
 
         public int ChooseDino()
         {
-            Console.WriteLine("Please type the number of the dinosaur to battle: \n1. " + herd.dinoList[0].DinoType + "\n2. " + herd.dinoList[1].DinoType + "\n3. " + herd.dinoList[2].DinoType);
+            Console.WriteLine("Please type the number of the dinosaur to battle:\n");
+            foreach (Dino dino in herd.dinoList)
+            {
+                Console.WriteLine(dino.DinoType);
+                
+                
+            }
             int dinoInput = Convert.ToInt32(Console.ReadLine());
             return dinoInput;
         }
+             
+            
 
         public void Battle()
         {
-            while (fleet.robotList != null && herd.dinoList != null)
+            while (fleet.robotList.Count > 0 && herd.dinoList.Count > 0)
             {
                 DinoAttack();
                 RobotAttack();
             }
-            
+            DeclareWinner();
+        }
 
+        public void DeclareWinner()
+        {
+            if(fleet.robotList == null)
+            {
+                Console.WriteLine("Dinosaurs win!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Robots win!");
+                Console.ReadLine();
+            }
         }
 
         public void DinoAttack()
