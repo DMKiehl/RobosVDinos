@@ -12,6 +12,10 @@ namespace RobotsVsDinosaurs
         {
             Battlefield newBattle = new Battlefield();
             newBattle.InitiateBattle();
+            newBattle.ChooseDino();
+            newBattle.ChooseRobot();
+            newBattle.AttackBattle();
+
             
         }
     }

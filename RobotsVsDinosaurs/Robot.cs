@@ -21,8 +21,12 @@ namespace RobotsVsDinosaurs
             //RobotHealth = robotHealth;
             //RobotPower = robotPower;
             AssignedWeapon = new Weapon();
-            AssignedWeapon.AssignWeapon(RobotType);
+            AssignedWeapon.AssignWeapon("Humanoid");
+            AssignedWeapon.AssignWeapon("Destroyer");
+            AssignedWeapon.AssignWeapon("Nightcraweler");
         }
+
+
 
         
 

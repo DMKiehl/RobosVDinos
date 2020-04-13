@@ -10,10 +10,12 @@ namespace RobotsVsDinosaurs
     {
 
         //member variables
-        //public Dino Stegosaurus = new Dino("Stegosaurus", 35, 100, 4);
-        //public Dino Triceratops = new Dino("Triceratops", 30, 100, 5);
-        //public Dino Tyrannosaurus = new Dino("Tyrannosaurus", 40, 100, 7);
         public List<Dino> dinoList;
+
+        public Herd()
+        {
+
+        }
 
 
         public List<Dino> PullDinos()

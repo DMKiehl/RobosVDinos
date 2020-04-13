@@ -15,7 +15,10 @@ namespace RobotsVsDinosaurs
         //public Robot Destroyer = new Robot("Destroyer", 35, 100);
         public List<Robot> robotList;
 
+        public Fleet()
+        {
 
+        }
 
 
         public List<Robot> PullRobots()
