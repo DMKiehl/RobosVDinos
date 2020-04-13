@@ -36,6 +36,7 @@ namespace RobotsVsDinosaurs
             else
             {
                 dinoToAttack.DinoHealth -= AssignedWeapon.AttackPower;
+                Console.WriteLine("Dino Health is :" + dinoToAttack.DinoHealth);
             }
             
 

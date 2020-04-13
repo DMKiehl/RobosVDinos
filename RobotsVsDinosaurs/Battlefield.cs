@@ -10,7 +10,6 @@ namespace RobotsVsDinosaurs
     {
 
         //member variables
-        Random myRandom = new Random();
         Fleet fleet = new Fleet();
         Herd herd = new Herd();
         //public int RobotHealth;
@@ -39,117 +38,155 @@ namespace RobotsVsDinosaurs
 
         public int ChooseDino()
         {
-            Console.WriteLine("Please type the number of the dinosaur to battle: \n1. Stegosaurus \n2. Triceratops \n3. Tyrannosaurus");
+            Console.WriteLine("Please type the number of the dinosaur to battle: \n1. " + herd.dinoList[0].DinoType + "\n2. " + herd.dinoList[1].DinoType + "\n3. " + herd.dinoList[2].DinoType);
             int dinoInput = Convert.ToInt32(Console.ReadLine());
             return dinoInput;
         }
 
         public void Battle()
         {
-           
+            while (fleet.robotList != null && herd.dinoList != null)
+            {
+                DinoAttack();
+                RobotAttack();
+            }
+            
 
         }
 
         public void DinoAttack()
         {
-
-            Dino theAttack = new Dino();
-            int chosenRobot = ChooseRobot();
-            if (chosenRobot == 1)
-            {
-                Robot myRobot = fleet.robotList[0];
-                if(fleet.robotList[0].RobotHealth <= 0)
-                {
-                    Console.WriteLine("This robot is dead. Please choose another.");
-                }
-
-                else
-                {
-                    theAttack.AttackRobot(myRobot);
-                }
-                
-
-                //return myRobot;
-            }
-            else if (chosenRobot == 2)
-            {
-                Robot myRobot = fleet.robotList[1];
-                if (fleet.robotList[1].RobotHealth <= 0)
-                {
-                    Console.WriteLine("This robot is dead. Please choose another.");
-                }
-
-                else
-                {
-                    theAttack.AttackRobot(myRobot);
-                }
-
-                //return myRobot;
-            }
-            else
-            {
-                Robot myRobot = fleet.robotList[2];
-                if (fleet.robotList[2].RobotHealth <= 0)
-                {
-                    Console.WriteLine("This robot is dead. Please choose another.");
-                }
-
-                else
-                {
-                    theAttack.AttackRobot(myRobot);
-                }
-                //return myRobot;
-            }
-
             
+            for (int i = 0; i < herd.dinoList.Count; i++)
+            {
+                int chosenRobot = ChooseRobot();
+                if (chosenRobot == 1)
+                {
+                    Robot myRobot = fleet.robotList[0];
+                    if (fleet.robotList[0].RobotHealth <= 0)
+                    {
+                        Console.WriteLine("This robot is dead. Please choose another.");
+                    }
+
+                    else
+                    {
+                        herd.dinoList[i].AttackRobot(myRobot);
+                        if(myRobot.RobotHealth <= 0)
+                        {
+                            Console.WriteLine(myRobot.RobotType + " is dead.");
+                            fleet.robotList.Remove(myRobot);
+                            
+                        }
+                    }
+
+                }
+                else if (chosenRobot == 2)
+                {
+                    Robot myRobot = fleet.robotList[1];
+                    if (fleet.robotList[1].RobotHealth <= 0)
+                    {
+                        Console.WriteLine("This robot is dead. Please choose another.");
+                    }
+
+                    else
+                    {
+                        herd.dinoList[i].AttackRobot(myRobot);
+                        if (myRobot.RobotHealth <= 0)
+                        {
+                            fleet.robotList.Remove(myRobot);
+                            Console.WriteLine(myRobot.RobotType + " is dead.");
+                        }
+                    }
+
+                    //return myRobot;
+                }
+                else
+                {
+                    Robot myRobot = fleet.robotList[2];
+                    if (fleet.robotList[2].RobotHealth <= 0)
+                    {
+                        Console.WriteLine("This robot is dead. Please choose another.");
+                    }
+
+                    else
+                    {
+                        herd.dinoList[i].AttackRobot(myRobot);
+                        if (myRobot.RobotHealth <= 0)
+                        {
+                            Console.WriteLine(myRobot.RobotType + " is dead.");
+                            fleet.robotList.Remove(myRobot);
+                        }
+                    }
+                    
+                }
+
+            }
+
+
+
+
+
 
         }
         
         public void RobotAttack()
         {
-            Robot theAttack = new Robot();
-            int chosenDino = ChooseDino();
-            if (chosenDino == 1)
+            for(int i = 0; i < fleet.robotList.Count; i++)
             {
-                Dino myDino = herd.dinoList[0];
-                if (herd.dinoList[0].DinoHealth <= 0)
+                int chosenDino = ChooseDino();
+                if (chosenDino == 1)
                 {
-                    Console.WriteLine("This dino is dead. Please choose another.");
+                    Dino myDino = herd.dinoList[0];
+                    if (herd.dinoList[0].DinoHealth <= 0)
+                    {
+                        Console.WriteLine("This dino is dead. Please choose another.");
+                    }
+                    else
+                    {
+                        fleet.robotList[i].AttackDino(myDino);
+                        if (myDino.DinoHealth <= 0)
+                        {
+                            Console.WriteLine(myDino.DinoType + " is dead.");
+                            herd.dinoList.Remove(myDino);
+                        }
+                    }
+                }
+                else if (chosenDino == 2)
+                {
+                    Dino myDino = herd.dinoList[1];
+                    if (herd.dinoList[1].DinoHealth == 0)
+                    {
+                        Console.WriteLine("This dino is dead. Please choose another.");
+                    }
+                    else
+                    {
+                        fleet.robotList[i].AttackDino(myDino);
+                        if (myDino.DinoHealth <= 0)
+                        {
+                            Console.WriteLine(myDino.DinoType + " is dead.");
+                            herd.dinoList.Remove(myDino);
+                        }
+                    }
                 }
                 else
                 {
-                    theAttack.AttackDino(myDino);
+                    Dino myDino = herd.dinoList[2];
+                    if (herd.dinoList[2].DinoHealth == 0)
+                    {
+                        Console.WriteLine("This dino is dead. Please choose another.");
+                    }
+                    else
+                    {
+                        fleet.robotList[i].AttackDino(myDino);
+                        if (myDino.DinoHealth <= 0)
+                        {
+                            Console.WriteLine(myDino.DinoType + " is dead.");
+                            herd.dinoList.Remove(myDino);
+                        }
+                    }
                 }
 
-                //return myDino;
             }
-            else if (chosenDino == 2)
-            {
-                Dino myDino = herd.dinoList[1];
-                if (herd.dinoList[1].DinoHealth == 0)
-                {
-                    Console.WriteLine("This dino is dead. Please choose another.");
-                }
-                else
-                {
-                    theAttack.AttackDino(myDino);
-                }
-                
-               // return myDino;
-            }
-            else
-            {
-                Dino myDino = herd.dinoList[2];
-                if (herd.dinoList[2].DinoHealth == 0)
-                {
-                    Console.WriteLine("This dino is dead. Please choose another.");
-                }
-                else
-                {
-                theAttack.AttackDino(myDino);
-                }
-               // return myDino;
-             }
 
         }
 

@@ -26,7 +26,7 @@ namespace RobotsVsDinosaurs
         }
 
         //member methods
-        public void AttackRobot(Robot robotToAttack, Dino dinoAttacking)
+        public void AttackRobot(Robot robotToAttack)
         {
             if (robotToAttack.RobotHealth <= 0)
             {
@@ -34,7 +34,8 @@ namespace RobotsVsDinosaurs
             }
             else
             {
-                robotToAttack.RobotHealth -= dinoAttacking.DinoAttackPower;
+                robotToAttack.RobotHealth -= DinoAttackPower;
+                Console.WriteLine("Robot Health is :" + robotToAttack.RobotHealth);
             }
             
 
