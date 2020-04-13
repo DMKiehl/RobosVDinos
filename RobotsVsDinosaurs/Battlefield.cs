@@ -23,7 +23,7 @@ namespace RobotsVsDinosaurs
             
         }
 
-
+        //member methods
         public int ChooseRobot()
         {
             Console.WriteLine("Please choose the number of the robot to battle: \n");
@@ -53,7 +53,7 @@ namespace RobotsVsDinosaurs
 
         public void Battle()
         {
-            while (fleet.robotList.Count > 0 && herd.dinoList.Count > 0)
+            while (fleet.robotList.Count != 0 & herd.dinoList.Count != 0)
             {
                 DinoAttack();
                 RobotAttack();
@@ -63,7 +63,7 @@ namespace RobotsVsDinosaurs
 
         public void DeclareWinner()
         {
-            if(fleet.robotList == null)
+            if(fleet.robotList.Count == 0)
             {
                 Console.WriteLine("Dinosaurs win!");
                 Console.ReadLine();
@@ -119,7 +119,6 @@ namespace RobotsVsDinosaurs
                         }
                     }
 
-                    //return myRobot;
                 }
                 else
                 {
@@ -142,11 +141,6 @@ namespace RobotsVsDinosaurs
                 }
 
             }
-
-
-
-
-
 
         }
         
@@ -211,77 +205,5 @@ namespace RobotsVsDinosaurs
 
         }
 
-        
-
-        //public void AttackBattle()
-        //{
-            
-            
-
-         
-
-        //    while(DinoHealth > 0 && RobotHealth > 0)
-        //    {
-        //        ////diceOne is Robot
-        //        //int DinoRoll = RollDice();
-        //        ////DiceTwo is Dino
-        //        //int RobotRoll = RollDice();
-        //        ////roll dice to determine random numbers
-
-        //        //RoundWinner(DinoRoll, RobotRoll);
-
-        //    }
-
-        //   // DisplayBattleWinner(DinoHealth, RobotHealth);
-        //}
-
-        //public int RollDice()
-        //{
-        //    int min = 1;
-        //    int max = 7;
-
-        //    int result = myRandom.Next(min, max);
-
-        //    return result;
-        //}
-
-        //public void RoundWinner(int DinoRoll, int RobotRoll)
-        //{
-
-        //    if (DinoRoll > RobotRoll)
-        //    {
-        //        //RobotHealth -= DinoAttackPower;
-        //        Console.WriteLine("Robot Health = " + RobotHealth);
-        //        Console.WriteLine("DinoHealth = " + DinoHealth);
-        //        Console.ReadLine(); 
-        //    }
-        //    else if (RobotRoll > DinoRoll)
-        //    {
-        //        //DinoHealth -= WeaponPower;
-        //        Console.WriteLine("Robot Health = " + RobotHealth);
-        //        Console.WriteLine("DinoHealth = " + DinoHealth);
-        //        Console.ReadLine();
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("No winner, battle again!");
-        //        Console.ReadLine();
-        //    }
-        //}
-
-        //public void DisplayBattleWinner(int DinoHealth, int RobotHealth)
-        //{
-        //    if (DinoHealth == 0)
-        //    {
-        //        Console.WriteLine("Robot wins!");
-        //        Console.ReadLine();
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Dino wins!");
-        //        Console.ReadLine();
-        //    }
-
-        //}
     }
 }

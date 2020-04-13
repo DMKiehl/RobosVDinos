@@ -18,11 +18,7 @@ namespace RobotsVsDinosaurs
 
         public Dino()
         {
-           // DinoType = dinoType;
-            //DinoHealth = dinoHealth;
-           // DinoEnergy = dinoEnergy;
-           // DinoAttackPower = dinoAttackPower;
-
+           
         }
 
         //member methods

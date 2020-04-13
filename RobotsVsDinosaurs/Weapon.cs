@@ -24,26 +24,26 @@ namespace RobotsVsDinosaurs
             AssignWeapon(weaponType);
         }
 
-
+        //member methods
         public void AssignWeapon(string robotType)
         {
 
             if (robotType == "Humanoid")
             {
                 WeaponType = "Powerfists";
-                AttackPower = 5;
+                AttackPower = 6;
                 
             }
 
             else if (robotType == "Destroyer")
             { 
                  WeaponType = "Rocket";
-                 AttackPower = 6;
+                 AttackPower = 7;
             }
             else
             {
                 WeaponType = "Sword";
-                AttackPower = 4;
+                AttackPower = 5;
             }
                     
 
@@ -59,7 +59,7 @@ namespace RobotsVsDinosaurs
             
 
 
-        //member methods
+        
 
         
     }
